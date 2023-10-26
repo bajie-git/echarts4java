@@ -4,34 +4,60 @@
 使用java生成各种echarts图表
 
 #### 软件架构
-软件架构说明
+基于echarts 5.2.4 图表及 deno 打包成动态链接库，使用jni调用。
 
+#### 快速开始
 
-#### 安装教程
+- clone项目，运行App#main方法;
+- 目前没有找到比较好加载resources目录下链接库的方法，现在是启动时读取charming2jni.dll写入到硬盘上，然后在通过System.load进行加载。 
+- 
+- **注意：Echarts.java 这个类所在的包名以及里面的方法名字很重要，必须叫这个名字**
+#### 使用方法
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+由于是基于echarts进行渲染，所以本质上和前端使用echarts画图很相似。
+去[ecahrt官网](https://echarts.apache.org/examples/zh/index.html) 选一个示例,例如选择![img.png](img%2Fimg.png)。
+接下来只需要把option这个json对象传入方法就可以了：
+```java
+// 数据说明： https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
+String json = """
+        {
+          legend: {
+            top: 'bottom'
+          },
+          toolbox: {
+            show: true,
+            feature: {
+              mark: { show: true },
+              dataView: { show: true, readOnly: false },
+              restore: { show: true },
+              saveAsImage: { show: true }
+            }
+          },
+          series: [
+            {
+              name: 'Nightingale Chart',
+              type: 'pie',
+              radius: [50, 250],
+              center: ['50%', '50%'],
+              roseType: 'area',
+              itemStyle: {
+                borderRadius: 8
+              },
+              data: [
+                { value: 40, name: 'rose 1' },
+                { value: 38, name: 'rose 2' },
+                { value: 32, name: 'rose 3' },
+                { value: 30, name: 'rose 4' },
+                { value: 28, name: 'rose 5' },
+                { value: 26, name: 'rose 6' },
+                { value: 22, name: 'rose 7' },
+                { value: 18, name: 'rose 8' }
+              ]
+            }
+          ]
+        }
+        """;
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+// 生成png格式文件
+Echarts.save(1000,1000,"D:/123.png",json);
+```

@@ -9,6 +9,7 @@ import java.nio.file.Path;
  */
 public class App {
     public static void main(String[] args) throws IOException {
+        // 数据说明： https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
         String json = """
                 {
                   legend: {
@@ -49,7 +50,7 @@ public class App {
                 """;
 
         // 生成png格式文件
-        Echarts.save(500,1000,"D:/123.png",json);
+        Echarts.save(1000,1000,"D:/123.png",json);
         // 生成svg格式 byte数组
         byte[] bytes = Echarts.render(1000, 1000, "svg", json);
         Files.write(Path.of("D:/123.svg"), bytes);
