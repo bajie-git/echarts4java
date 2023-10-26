@@ -50,7 +50,7 @@ public class App {
                 """;
 
         // 生成png格式文件
-        Echarts.save(1000,1000,"charts.png",json);
+        Echarts.save(1000,1000,"D:/charts.png",json);
         // 生成svg格式 byte数组
         byte[] bytes = Echarts.render(1000, 1000, "svg", json);
         Files.write(Path.of("charts.svg"), bytes);
