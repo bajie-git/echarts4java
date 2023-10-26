@@ -21,4 +21,44 @@
   <dependencies>
   </dependencies>
 
+  <build>
+    <!--设置打包后项目名称-->
+    <finalName>echarts4java</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <!-- 是否在文件名后面追加descriptor的id。-->
+          <!-- 例如值为true时，生成的文件名：slf-ds-jar-with-dependencies.jar -->
+          <appendAssemblyId>false</appendAssemblyId>
+          <descriptorRefs>
+            <!-- 内置的：设置打包方式将所有依赖都打入 -->
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+            <!--自定义的-->
+            <!-- <descriptors>
+                <descriptor>src/main/assembly/assembly.xml</descriptor>
+            </descriptors> -->
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <!-- 此处指定main方法入口的class -->
+              <mainClass>top.magicpotato.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        <executions>
+          <!-- 配置执行器 -->
+          <execution>
+            <id>make-assembly</id>
+            <!-- 绑定到package生命周期,运行package命令就可以 -->
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>

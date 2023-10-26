@@ -17,7 +17,7 @@ public class Echarts {
             fileName = "charming2jni.dll";
         } else if (os.startsWith("Linux")) {
             // Linux操作系统
-            fileName = "charming2jni.so";
+            fileName = "libcharming2jni.so";
         } else {
             // 其他操作系统
             throw new RuntimeException("不支持的系统");
