@@ -15,7 +15,9 @@
 #### 使用方法
 
 由于是基于echarts进行渲染，所以本质上和前端使用echarts画图很相似。
-去[ecahrt官网](https://echarts.apache.org/examples/zh/index.html) 选一个示例,例如选择![img.png](img%2Fimg.png)。
+去[ecahrt官网](https://echarts.apache.org/examples/zh/index.html) 选一个示例,例如选择:
+[img.png](https://gitee.com/ychuanl/echarts4java/raw/master/img/img.png)
+
 接下来只需要把option这个json对象传入方法就可以了：
 ```java
 // 数据说明： https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
