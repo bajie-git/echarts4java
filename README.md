@@ -13,6 +13,7 @@
 - 
 - **注意：Echarts.java 这个类所在的包名以及里面的方法名字很重要，必须叫这个名字**
 #### 使用方法
+核心就是charming2jni.dll、charming2jni.so两个文件，将项目clone到本地后，把这俩文件和top.magicpotato.Echarts复制到你自己的项目中即可。
 
 由于是基于echarts进行渲染，所以本质上和前端使用echarts画图很相似。
 去[ecahrt官网](https://echarts.apache.org/examples/zh/index.html) 选一个示例,例如选择:
