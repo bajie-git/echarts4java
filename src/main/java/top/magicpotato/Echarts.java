@@ -18,6 +18,9 @@ public class Echarts {
         } else if (os.startsWith("Linux")) {
             // Linux操作系统
             fileName = "libcharming2jni.so";
+        } else if (os.startsWith("Mac")) {
+            // Mac操作系统
+            fileName = "libcharming2jni.dylib";
         } else {
             // 其他操作系统
             throw new RuntimeException("不支持的系统");
