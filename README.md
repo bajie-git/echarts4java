@@ -6,16 +6,16 @@
 **有问题请提issues我会积极解决**
 
 #### 软件架构
-基于echarts 5.2.4 图表及 deno 打包成动态链接库(win: charming2jni.dll; linux: charming2jni.so)，使用jni调用。
+基于echarts 5.2.4 图表及 deno 打包成动态链接库(win: charming2jni.dll; linux: charming2jni.so; macos: libcharming2jni.dylib)，使用jni调用。
 
 #### 快速开始
 
 - clone项目，运行App#main方法;
-- 目前没有找到比较好加载resources目录下链接库的方法，现在是启动时读取charming2jni.dll写入到硬盘上，然后在通过System.load进行加载。 
+- 目前没有找到比较好加载resources目录下链接库的方法，现在是启动时读取charming2jni.dll写入到硬盘上，然后在通过System.load进行加载。如果你有更好的办法欢迎讨论 
 - 
 - **注意：Echarts.java 这个类所在的包名以及里面的方法名字很重要，必须叫这个名字**
 #### 使用方法
-核心就是charming2jni.dll、charming2jni.so两个文件，将项目clone到本地后，把这俩文件和top.magicpotato.Echarts复制到你自己的项目中即可。
+核心就是charming2jni.dll、charming2jni.so、libcharming2jni.dylib，将项目clone到本地后，把这三个链接库文件和top.magicpotato.Echarts复制到你自己的项目中即可。
 
 由于是基于echarts进行渲染，所以本质上和前端使用echarts画图很相似。
 去[ecahrt官网](https://echarts.apache.org/examples/zh/index.html) 选一个示例,例如选择:
