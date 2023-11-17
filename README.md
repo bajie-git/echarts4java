@@ -4,6 +4,7 @@
 使用java生成echarts图片,支持多种图片格式 jpg/png/svg 等等
 
 **有问题请提issues我会积极解决**
+**目前动态链接库仅支持X86架构**
 
 #### 软件架构
 基于echarts 5.2.4 图表及 deno 打包成动态链接库(win: charming2jni.dll; linux: charming2jni.so; macos: libcharming2jni.dylib)，使用jni调用。
