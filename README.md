@@ -70,3 +70,10 @@ Echarts.save(1000,1000,"D:/123.png",json);
 
 **123.png**
 ![img_1.png](https://gitee.com/ychuanl/echarts4java/raw/master/img/img_1.png)
+
+
+#### FAQ
+
+##### Glibc 版本  
+
+libc6 2.35 
