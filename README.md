@@ -77,3 +77,9 @@ Echarts.save(1000,1000,"D:/123.png",json);
 ##### Glibc 版本  
 
 libc6 2.35 
+
+##### G中文乱码  
+
+1. 原因是缺少中文字体，可以将windows上的中文字体复制到 /usr/share/fonts/truetype/ 目录下,然后分别执行 mkfontscale、mkfontdir、fc-cache -fv 更新字体缓存。
+2. 或者直接解压项目中fonts.zip覆盖 /usr/share/fonts 目录，然后分别执行 mkfontscale、mkfontdir、fc-cache -fv 更新字体缓存。  
+**fonts.zip 里面是我打包好的字体，适合大多数场景。**
