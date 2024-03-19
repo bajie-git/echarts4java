@@ -78,8 +78,23 @@ Echarts.save(1000,1000,"D:/123.png",json);
 
 libc6 2.35 
 
-##### G中文乱码  
+##### 中文乱码  
 
 1. 原因是缺少中文字体，可以将windows上的中文字体复制到 /usr/share/fonts/truetype/ 目录下,然后分别执行 mkfontscale、mkfontdir、fc-cache -fv 更新字体缓存。
-2. 或者直接解压项目中fonts.zip覆盖 /usr/share/fonts 目录，然后分别执行 mkfontscale、mkfontdir、fc-cache -fv 更新字体缓存。  
-**fonts.zip 里面是我打包好的字体，适合大多数场景。**
+2. 或者直接解压项目中fonts.zip覆盖 /usr/share/fonts 目录，然后分别执行 mkfontscale、mkfontdir、fc-cache -fv 更新字体缓存。**fonts.zip 里面是我打包好的字体，适合大多数场景。**
+```shell
+# 如果提示 mkfontscale: command not found
+# 在Ubuntu下运行如下命令
+# sudo apt-get install ttf-mscorefonts-installer
+# 在cent os下运行如下命令
+# yum install mkfontscale 
+mkfontscale
+mkfontdir
+
+# 如果提示 fc-cache: command not found
+# 在Ubuntu下运行如下命令
+# sudo apt-get install fontconfig
+# 在cent os下运行如下命令
+# yum install fontconfig
+fc-cache -fv 
+```
