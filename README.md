@@ -72,6 +72,11 @@ Echarts.save(1000,1000,"D:/123.png",json);
 ![img_1.png](https://gitee.com/ychuanl/echarts4java/raw/master/img/img_1.png)
 
 
+#### 下一步
+1. 增加arm架构支持
+2. 整理开放链接库源码
+
+
 #### FAQ
 
 ##### Glibc 版本  
