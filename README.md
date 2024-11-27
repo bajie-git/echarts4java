@@ -7,7 +7,7 @@
 **目前动态链接库仅支持X86架构**
 
 #### 软件架构
-基于echarts 5.2.4 图表及 deno 打包成动态链接库(win: charming2jni.dll; linux: charming2jni.so; macos: libcharming2jni.dylib)，使用jni调用。
+基于echarts 5.5.1 图表及 deno 打包成动态链接库(win: charming2jni.dll; linux: charming2jni.so; macos: libcharming2jni.dylib)，使用jni调用。
 
 #### 快速开始
 
