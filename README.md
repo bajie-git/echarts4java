@@ -74,8 +74,8 @@ Echarts.save(1000,1000,"D:/123.png",json);
 
 #### 下一步
 1. 增加arm架构支持
-2. 整理开放链接库源码
-3. 更新echarts到5.5.1
+2. ~~公开链接库源码~~ [这里](https://github.com/bajie-git/charming2jni)
+3. ~~更新echarts到5.5.1~~
 
 
 #### FAQ
