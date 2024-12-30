@@ -84,6 +84,8 @@ Echarts.save(1000,1000,"D:/123.png",json);
 
 libc6 2.35 
 
+如果你得版本不匹配可以拉取链接库源码自行编译（编译之后的版本欢迎pr回来）
+
 ##### 中文乱码  
 
 1. 原因是缺少中文字体，可以将windows上的中文字体复制到 /usr/share/fonts/truetype/ 目录下,然后分别执行 mkfontscale、mkfontdir、fc-cache -fv 更新字体缓存。
