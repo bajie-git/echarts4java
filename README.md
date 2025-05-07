@@ -107,3 +107,6 @@ mkfontdir
 # yum install fontconfig
 fc-cache -fv 
 ```
+
+##### 字体不清晰
+参考[此处](https://gitee.com/ychuanl/echarts4java/issues/IC5SD1)
