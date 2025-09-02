@@ -26,7 +26,7 @@ public class Echarts {
             throw new RuntimeException("不支持的系统");
         }
         Path path = Path.of(fileName);
-        try (InputStream resourceAsStream = Echarts.class.getResourceAsStream("/" + fileName); OutputStream outputStream = Files.newOutputStream(path)) {
+        try (InputStream resourceAsStream = Echarts.class.getResourceAsStream("/0_6_0/" + fileName); OutputStream outputStream = Files.newOutputStream(path)) {
             Objects.requireNonNull(resourceAsStream, "无法加载链接库").transferTo(outputStream);
         } catch (IOException e) {
             throw new RuntimeException(e);
