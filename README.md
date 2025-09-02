@@ -25,7 +25,7 @@
 接下来只需要把option这个json对象传入方法就可以了：
 ```java
 // 数据说明： https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
-// 注意必须是json字符串，key必须有双引号，不是json对象
+// 注意必须是json字符串，key必须有双引号，不是js对象
 String json = """
               {
                 "legend": {
