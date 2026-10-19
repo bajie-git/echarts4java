@@ -1,5 +1,7 @@
 package top.magicpotato;
 
+import org.scijava.nativelib.NativeLoader;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,6 +11,10 @@ import java.nio.file.Path;
  */
 public class App {
     public static void main(String[] args) throws IOException {
+        // 加载动态库
+        NativeLoader.loadLibrary("charming2jni");
+
+
         // 数据说明： https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
         String json = """
                 {
