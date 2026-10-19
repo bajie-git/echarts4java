@@ -134,3 +134,7 @@ fc-cache -fv
 
 ##### 字体不清晰
 参考[此处](https://gitee.com/ychuanl/echarts4java/issues/IC5SD1)
+
+##### 跟新频率
+
+项目本身只是针对echarts的二次封装，自身并没有什么需要频繁更新的东西，我会在有人反馈问题或者echarts出大版本的时候进行更新。
