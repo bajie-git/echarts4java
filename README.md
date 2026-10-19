@@ -12,8 +12,7 @@
 #### 快速开始
 
 - clone项目，运行App#main方法;
-- 目前没有找到比较好加载resources目录下链接库的方法，现在是启动时读取charming2jni.dll写入到硬盘上，然后在通过System.load进行加载。如果你有更好的办法欢迎讨论 
-- 
+- ~~目前没有找到比较好加载resources目录下链接库的方法，现在是启动时读取charming2jni.dll写入到硬盘上，然后在通过System.load进行加载。如果你有更好的办法欢迎讨论~~
 - **注意：Echarts.java 这个类所在的包名以及里面的方法名字很重要，必须叫这个名字**
 #### 使用方法
 核心就是charming2jni.dll、charming2jni.so、libcharming2jni.dylib，将项目clone到本地后，把这三个链接库文件和top.magicpotato.Echarts复制到你自己的项目中即可。
@@ -24,6 +23,8 @@
 
 接下来只需要把option这个json对象传入方法就可以了：
 ```java
+// 通过 https://github.com/scijava/native-lib-loader 加载动态库
+NativeLoader.loadLibrary("charming2jni");
 // 数据说明： https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType-simple
 // 注意必须是json字符串，key必须有双引号，不是js对象
 String json = """
